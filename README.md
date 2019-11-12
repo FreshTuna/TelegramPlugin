@@ -38,3 +38,39 @@ Import these:
   from telethon.tl.types import InputPeerUser
 ```
 For the output it sends messages to your contact list.
+
+
+```python
+invite_link = 'http://t.me//AS##sDFX'
+user_input_channel = invite_link
+
+if user_input_channel.isdigit():
+    entity = PeerChannel(int(user_input_channel))
+else:
+    entity = user_input_channel
+
+my_channel = client.get_entity(invite_link)
+```
+
+Telethon Get Message from Channel
+--------------------------------
+```python
+my_channel = client.get_entity(invite_link) #invite_link was declared above
+print(my_channel)
+
+channel_entity=client.get_entity(invite_link)
+posts = client(GetHistoryRequest(
+    peer=channel_entity,
+    limit=100,
+    offset_date=None,
+    offset_id=0,
+    max_id=0,
+    min_id=0,
+    add_offset=0,
+    hash=0))
+
+for message in posts.messages:
+    print(message.message)
+```
+
+This code shows all the message inside the channel.
