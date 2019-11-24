@@ -77,7 +77,7 @@ This code shows all the message inside the channel.
 
 Telethon Get all the users in the channel
 ------------------------------------------
-```pyhton
+```python
 channel ='ASD****XV'  #channel name
 channels = {d.entity.username: d.entity
             for d in client.get_dialogs()
@@ -87,8 +87,8 @@ print(channel)
 for u in client.iter_participants(channel, aggressive=True):
   print(u.id, u.first_name, u.last_name, u.username)
 
-#output = 854426623 Jun Young Jang jangjunyoung
-#         968930907 Yeom Choongseok None
+#output = 8#####3 Jun Y##### ###g j#######ng
+#         9####90# Yeom ####seok None
 ```
 
 The output shows ID, Name, Username. 
