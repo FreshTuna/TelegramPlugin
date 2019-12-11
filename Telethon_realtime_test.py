@@ -16,8 +16,8 @@ from telethon.tl.types.contacts import Contacts
 from telethon.tl.functions.contacts import GetContactsRequest
 from telethon.tl.types import InputPeerUser
 
-api_id = 474030
-api_hash = '56be342c1ace1f9509ca1e1d920eed5e'
+api_id = 47#0#0
+api_hash = '56####42c1a#####d920eed5e'
 client = TelegramClient('anon', api_id, api_hash)
 client.start()
 
